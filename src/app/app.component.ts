@@ -28,9 +28,19 @@ export class AppComponent {
       this.employeeArray.push(this.selectedEmployee); //para que el nuevo employee se agregue al final de todo del arreglo, el empleado que estoy llenando (selected) se guarda dentro del arreglo
 
     }
-
-
     this.selectedEmployee = new Employee(); //cuando agregamos uno nuevo new employee queda vacio
 }
-  
+  delete() {
+
+    if(confirm('Are you sure you want to delete it?')){ //aparece alert
+      this.employeeArray = this.employeeArray.filter(x => x != this.selectedEmployee); //se elimina
+      this.selectedEmployee = new Employee(); //ahi se va de la lista
+
+    }
+
+
+   
+  }  
+
+
   }

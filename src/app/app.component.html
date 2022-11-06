@@ -33,6 +33,13 @@
               <button (click)="addOrEdit()" class="btn btn-primary mt-3">
                 Submit
               </button>
+              <button               
+              *ngIf="selectedEmployee.id !== 0 "
+              class="btn btn-danger mt-3"
+              (click)="delete()"
+              >
+                Delete
+              </button>
             </div>
           </div>
 
